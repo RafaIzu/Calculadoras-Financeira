@@ -33,7 +33,8 @@ class Vpl:
     
     def get_vpl(self):
         self.set_initial_values()
-        initial_investment_input = str(input("Digite o Investimento inicial: "))
+        initial_investment_input = str(input("Digite o" +
+                                       " Investimento inicial: "))
         positive_r_input = str(input("Digite a receita (R+): "))
         negative_r_input = str(input("Digite o custo (R-): "))
         residual_value_input = str(input("Digite o valor residual: "))

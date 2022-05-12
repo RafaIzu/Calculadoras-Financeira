@@ -57,17 +57,20 @@ class EquivalenceTriangle:
         value_input = str(input("Digite o valor futuro (S): "))
         future_value = self.input_treatment(value_input)
         print("[>>> Valor recebido:] ", future_value)
-        return round(future_value * (1 / (1 + self.interest) ** self.period), 2)
+        return round(future_value * (1 / (1 + self.interest) ** self.period),
+                     2)
     
     def case_3(self):
         '''Calcula o fator de valor atual para uma Série Uniforme
         de Pagamentos e/ou Recebimentos (R ===> P)
         Formula: P = R((1 - (1 / (1+i) ** n)) / i) '''
-        print("Selecionado: Valor atual para uma Série Uniforme de Pagamentos e ou Recebimentos")
+        print("Selecionado: Valor atual para uma Série Uniforme" +
+              " de Pagamentos e ou Recebimentos")
         value_input = str(input("Digite o pagamento (R): "))
         payment = self.input_treatment(value_input)
         print("[>>> Valor recebido:] ", payment)
-        return round(payment * ((1 - (1 / (1 + self.interest) ** self.period)) / self.interest), 2)
+        return round(payment * ((1 - (1 / (1 + self.interest) ** self.period))
+                                / self.interest), 2)
     
     def case_4(self):
         '''Calcula o fator de recuperação de capital (P ===> R)
@@ -76,17 +79,20 @@ class EquivalenceTriangle:
         value_input = str(input("Digite o valor presente(P): "))
         present_value = self.input_treatment(value_input)
         print("[>>> Valor recebido:] ", present_value)
-        return round(present_value * (self.interest / (1 - (1 / (1 + self.interest) ** self.period))), 2)
+        return round(present_value * (self.interest /
+                     (1 - (1 / (1 + self.interest) ** self.period))), 2)
     
     def case_5(self):
         '''Calcula o fator de valor futuro para uma série Uniforme de
         Pagamentos e/ou Recebimentos (R ===> S)
         Formula: S = R * (((1 + i) ** n) - 1 / i)'''
-        print("Selecionado: Valor futuro para uma série Uniforme de Pagamentos e/ou Recebimentos")
+        print("Selecionado: Valor futuro para uma série Uniforme" +
+              " de Pagamentos e/ou Recebimentos")
         value_input = str(input("Digite o pagamento (R): "))
         payment = self.input_treatment(value_input)
         print("[>>> Valor recebido:] ", payment)
-        return round(payment * (((1 + self.interest) ** self.period - 1) / self.interest), 2)
+        return round(payment * (((1 + self.interest) ** self.period - 1) /
+                     self.interest), 2)
     
     def case_6(self):
         '''Calcula o fator de fundo de Amortização (S ==> R)
@@ -95,11 +101,8 @@ class EquivalenceTriangle:
         value_input = str(input("Digite o valor futuro (S): "))
         future_value = self.input_treatment(value_input)
         print("[>>> Valor recebido:] ", future_value)
-        return round(future_value * (self.interest / (((1 + self.interest) ** self.period) - 1)) ,2)
-
-        
-
-
+        return round(future_value * (self.interest /
+                     (((1 + self.interest) ** self.period) - 1)) ,2)
 
 def equivalence_triangle():
     while True:
